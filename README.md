@@ -94,7 +94,7 @@ Within the training set, a further 85/15 validation split was used for model sel
 - **X_tr:** 20,400 rows — resampled for training
 - **X_val:** 3,600 rows — held at natural 22.1% default rate for unbiased validation metrics
 
-The test set was used exactly once, at the end of notebook `03_modelling.ipynb`, as the sole unbiased estimate of generalisation performance.
+The test set was used exactly once, at the end of notebook `03_modelling_copy.ipynb`, as the sole unbiased estimate of generalisation performance.
 
 ---
 
@@ -181,7 +181,7 @@ Key principles applied throughout:
 MSIN0097-CreditRiskDefault/
 │
 ├── data/
-│   ├── default_of credit_card_clients.csv   # Raw dataset from UCI ML Repository
+│   ├── default_of_credit_card_clients.csv   # Raw dataset from UCI ML Repository
 │   └── processed/
 │       └── artefacts/                        # Saved splits, fitted pipeline, model artefacts
 │           ├── X_tr_res.csv / y_tr_res.csv   # SMOTE-resampled training set (23,830 rows)
@@ -193,7 +193,7 @@ MSIN0097-CreditRiskDefault/
 ├── notebooks/
 │   ├── 01_EDA.ipynb            # Problem framing, EDA, train/test split
 │   ├── 02_preprocessing.ipynb  # Feature engineering, pipeline, imbalance handling, validation
-│   └── 03_modelling.ipynb      # Model shortlisting, tuning, evaluation, test set
+│   └── 03_03_modelling_copy.ipynb      # Model shortlisting, tuning, evaluation, test set
 │
 ├── final_agent_log.md          # Chronological log of Claude interactions
 └── README.md
@@ -226,7 +226,7 @@ The analysis follows a structured three-notebook progression:
 - Seven automated pipeline validation checks (NaN, inf, shape, ordering, zero-variance, class ratio)
 - Artefact serialisation to `data/processed/artefacts/`
 
-**03_modelling.ipynb** — Model shortlisting, tuning, and evaluation
+**03_modelling_copy.ipynb** — Model shortlisting, tuning, and evaluation
 - Majority-class dummy baseline
 - Logistic Regression with convergence verification (Experiment 1)
 - Random Forest with n_estimators stability check (Experiment 2)
@@ -313,7 +313,7 @@ After installing dependencies and placing the dataset at data/raw/default_of_cre
 
 1. `01_EDA.ipynb` — generates and saves train/test splits to `data/processed/artefacts/`
 2. `02_preprocessing.ipynb` — loads splits, builds pipeline, saves preprocessed artefacts
-3. `03_modelling.ipynb` — loads artefacts, runs full modelling pipeline, evaluates on test set
+3. `03_modelling_copy.ipynb` — loads artefacts, runs full modelling pipeline, evaluates on test set
 
 Each notebook saves its outputs so downstream notebooks can be rerun independently without re-executing upstream steps.
 
