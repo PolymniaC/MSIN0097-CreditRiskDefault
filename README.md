@@ -309,7 +309,7 @@ jupyter notebook
 
 ## Quick Reproduction
 
-After installing dependencies and placing the dataset at `data/default_of credit_card_clients.csv`, run the notebooks sequentially:
+After installing dependencies and placing the dataset at data/raw/default_of_credit_card_clients.csv, run the notebooks sequentially:
 
 1. `01_EDA.ipynb` — generates and saves train/test splits to `data/processed/artefacts/`
 2. `02_preprocessing.ipynb` — loads splits, builds pipeline, saves preprocessed artefacts
